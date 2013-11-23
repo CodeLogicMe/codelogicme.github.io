@@ -1,0 +1,189 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  background-color: #DCDCD4;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#center-logo {
+  // width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #A20E30;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  line-height: 120px;
+
+  &.scroll {
+    background-color: rgba(0,0,0,.3);
+    line-height: 80px;
+    #logo {
+      img {
+        margin-top: 20px;
+      }
+      h1 {
+        line-height: 80px;
+      }
+    }
+  }
+}
+
+#logo {
+  float: left;
+  height: 45px;
+  line-height: 30px;
+  display: block;
+  cursor: pointer;
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    margin: 40px 15px 0 0;
+  }
+
+  h1 {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 120px;
+  }
+
+  #codelogic {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+  }
+}
+
+#nav-buttons {
+  float: right;
+  color: #ffffff;
+  font-size: 18px;
+  // line-height: 60px;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1; /* Fix for IE7 */
+    *display: inline; /* Fix for IE7 */
+    cursor: pointer;
+    padding: 0 20px;
+  }
+}
+
+.grey {
+  color: #646464;
+}
+
+.section {
+  overflow: hidden;
+
+  .separator {
+    width: 24px;
+    height: 8px;
+    border-radius: 4px;
+    margin: 0 auto 25px auto;
+
+    &.grey {
+      background-color: #646464;
+    }
+  }
+}
+
+#sec-one {
+  background-color: #A20E30;
+
+  text-align: center;
+
+  .logo-wrapper {
+    &:hover {
+      .body-text-slogan {
+        font-size: 40px;
+        line-height: 60px;
+        opacity: 1;
+      }
+      .body-text-logo {
+        opacity: .2;
+      }
+
+      #center-logo {
+        opacity: .2;
+      }
+    }
+  }
+
+  .body-text {
+    color: white;
+    display: block;
+    overflow: hidden;
+    span {
+      display: block;
+    }
+  }
+
+  .body-text-logo {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .body-text-slogan {
+    font-size: 10px;
+    line-height: 10px;
+    margin-top: 10px;
+    opacity: 0;
+  }
+}
+
+.centertext {
+  text-align: center;
+}
+
+.title {
+  margin: 60px 0 40px 0;
+  font-size: 46px;
+  display: block;
+
+  &.grey {
+    color: #646464;
+  }
+
+  &.white {
+    color: #FFFFFF;
+  }
+}
+
+.bigtext {
+  font-size: 20px;
+}
+
+.subtitle {
+  font-size: 25px;
+}
+
+.smalltext {
+  font-size: 16px;
+}
+
+.transition {
+  -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+      -ms-transition: all .25s ease-in-out;
+       -o-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+}
