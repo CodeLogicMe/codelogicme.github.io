@@ -146,7 +146,15 @@ a:hover
     &.home {
       color: white;
       background-color: $main-colour;
-      height: 580px;
+      background-image: url(../img/bg.jpg);
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      background-position: 0 30%;
+      height: 300px;
+
+      .main-title-section {
+        margin: 20px 0;
+      }
     }
 
     &.sections {
@@ -295,7 +303,7 @@ a:hover
   color: white;
   position: relative;
   margin-top: -202px;
-  height: 202px;
+  // height: 202px;
   clear:both;
 
   &.about-us {
@@ -307,10 +315,11 @@ a:hover
 .footer-container {
   width: 90% !important;
   margin: 0 auto !important;
-  padding: 40px 0;
+  // padding: 40px 0;
 
   .footer-subsection {
     text-align: center;
+    margin: 40px 0;
 
     .footer-subsection-title {
       font-weight: 100;

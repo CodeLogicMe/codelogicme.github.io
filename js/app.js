@@ -24,8 +24,6 @@ $(function() {
     $('a[href="' + loadLocation + '"]').parent().addClass("active");
   }
 
-
-  // $(".loading-indicator").css("top", (winHeight - 16)/2);
   $(".loading-indicator").css("left", (winWidth - 16)/2);
   $(".loading-indicator").addClass("is-loading");
 
@@ -41,7 +39,9 @@ $(function() {
   });
 
   $(window).bind("hashchange", function() {
-    pageTitleContainer.addClass("inactive");
+    // pageTitleContainer.addClass("inactive");
+    pageTitleContainer.height(0);
+
 
     hashLocation = window.location.hash.substring(1);
 
@@ -63,7 +63,7 @@ $(function() {
     }, 250);
   });
 
-  $(window).trigger('hashchange');
+  $(window).trigger("hashchange");
 
 });
 
