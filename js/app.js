@@ -66,7 +66,3 @@ $(function() {
   $(window).trigger("hashchange");
 
 });
-
-
-
-

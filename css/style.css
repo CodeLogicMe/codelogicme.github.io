@@ -65,8 +65,9 @@ a:hover {
     .nav-list-container .nav-list li {
       color: #adbcc3;
       display: inline-block;
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 500;
       margin: 0 20px;
       cursor: pointer; }
       .nav-list-container .nav-list li:hover, .nav-list-container .nav-list li.active {
@@ -109,16 +110,17 @@ a:hover {
       -webkit-background-size: 100%;
       background-size: 100%;
       background-position: 0 30%;
-      height: 320px; }
+      height: 150px; }
       #main-container .page-title-container.home .main-title-section {
-        margin: 30px 0; }
+        line-height: 150px; }
     #main-container .page-title-container.sections {
       color: #2d4255;
       background-color: #fff;
       line-height: 150px; }
     #main-container .page-title-container .main-title-section {
-      font-weight: 100;
-      font-size: 60px;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 40px;
       margin: 0;
       padding: 0; }
     #main-container .page-title-container .main-title-logo-img {
@@ -150,8 +152,10 @@ a:hover {
   .main-content .sub-section {
     margin-bottom: 20px; }
     .main-content .sub-section .sub-section-title {
-      font-size: 20px;
-      font-weight: 300; }
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #adbcc3; }
     .main-content .sub-section .sub-section-text {
       display: block;
       padding: 10px 0;
@@ -177,7 +181,7 @@ a:hover {
   -webkit-appearance: none;
   outline: none;
   display: block;
-  width: 80%;
+  width: 100%;
   margin: 5px 0 15px 0;
   padding: 5px 10px;
   border: solid 1px #adbcc3;

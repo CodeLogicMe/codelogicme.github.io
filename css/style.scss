@@ -13,7 +13,7 @@ $light-main: #e93c4f;
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-  background-color: #f1f1f1;
+  background-color: $bg-grey;
   position: relative;
 }
 
@@ -91,8 +91,9 @@ a:hover
     li {
       color: $main-light;
       display: inline-block;
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 500;
       margin: 0 20px;
       cursor: pointer;
 
@@ -150,10 +151,11 @@ a:hover
       -webkit-background-size: 100%;
       background-size: 100%;
       background-position: 0 30%;
-      height: 320px;
+      height: 150px;
 
       .main-title-section {
-        margin: 30px 0;
+        // margin-top: 100px;
+        line-height: 150px;
       }
     }
 
@@ -164,8 +166,9 @@ a:hover
     }
 
     .main-title-section {
-      font-weight: 100;
-      font-size: 60px;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 40px;
       margin: 0;
       padding: 0;
     }
@@ -219,8 +222,10 @@ a:hover
     margin-bottom: 20px;
 
     .sub-section-title {
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $main-light;
     }
 
     .sub-section-text {
@@ -266,7 +271,7 @@ a:hover
     -webkit-appearance: none;
     outline: none;
     display: block;
-    width: 80%;
+    width: 100%;
     margin: 5px 0 15px 0;
     // padding: 5px 10px 5px 30px;
     padding: 5px 10px;
