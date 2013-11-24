@@ -47,6 +47,13 @@ header {
       font-weight: 300;
       margin: 0 20px;
       cursor: pointer; }
+      .nav-list-container .nav-list li a {
+        color: inherit;
+        text-decoration: none; }
+      .nav-list-container .nav-list li a:hover {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer; }
       .nav-list-container .nav-list li:last-child {
         margin-right: 0; }
 
@@ -62,25 +69,33 @@ header {
   top: 0;
   left: 0; }
 
-.main-container {
+#main-container {
   overflow: hidden;
   width: 100%; }
-  .main-container .page-title-container {
+  #main-container .page-title-container {
     overflow: hidden;
     text-align: center;
-    line-height: 150px;
     height: 150px; }
-    .main-container .page-title-container.home {
+    #main-container .page-title-container.inactive {
+      height: 0 !important; }
+    #main-container .page-title-container.home {
       color: white;
-      background-color: #a20e30; }
-    .main-container .page-title-container.sections {
+      background-color: #a20e30;
+      height: 580px; }
+    #main-container .page-title-container.sections {
       color: #2d4255;
-      background-color: #fff; }
-    .main-container .page-title-container .main-title-section {
+      background-color: #fff;
+      line-height: 150px; }
+    #main-container .page-title-container .main-title-section {
       font-weight: 100;
       font-size: 60px;
       margin: 0;
       padding: 0; }
+    #main-container .page-title-container .main-title-logo-img {
+      margin-top: 80px; }
+    #main-container .page-title-container .main-title-logo {
+      font-weight: 100;
+      margin: 30px 0 60px 0; }
 
 .main-content {
   margin-top: 80px;
@@ -99,12 +114,13 @@ header {
   color: white; }
   .page-footer.about-us {
     background-color: #e93c4f; }
-  .page-footer .footer-container {
-    width: 90% !important;
-    margin: 0 auto;
-    padding: 40px 0; }
-    .page-footer .footer-container .footer-subsection {
-      text-align: center; }
-      .page-footer .footer-container .footer-subsection .footer-subsection-title {
-        font-weight: 100;
-        margin-bottom: 0; }
+
+.footer-container {
+  width: 90% !important;
+  margin: 0 auto !important;
+  padding: 40px 0; }
+  .footer-container .footer-subsection {
+    text-align: center; }
+    .footer-container .footer-subsection .footer-subsection-title {
+      font-weight: 100;
+      margin-bottom: 0; }
