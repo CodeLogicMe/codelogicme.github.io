@@ -10,7 +10,8 @@ body {
   position: relative; }
 
 html, body {
-  height: 100%; }
+  height: auto;
+  min-height: 100%; }
 
 .transition {
   -webkit-transition: all .25s ease-in-out;
@@ -23,6 +24,15 @@ header {
   color: #2d4255 !important;
   z-index: 1000; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer; }
+
 .nav-container {
   overflow: hidden;
   line-height: 50px; }
@@ -31,7 +41,17 @@ header {
   overflow: hidden;
   float: left;
   height: 100px;
-  padding: 30px 0 20px 0; }
+  padding: 28px 0 20px 0; }
+  .logo-container .logo-image, .logo-container .logo-text {
+    float: left;
+    margin: 0;
+    padding: 0; }
+  .logo-container .logo-text {
+    margin-left: 20px;
+    font-weight: 300;
+    opacity: 0; }
+    .logo-container .logo-text.active {
+      opacity: 1; }
 
 .nav-list-container {
   overflow: hidden;
@@ -39,26 +59,30 @@ header {
   padding: 30px 0 20px 0; }
   .nav-list-container .nav-list {
     list-style: none;
+    height: 50px;
     margin: 0;
     padding: 0; }
     .nav-list-container .nav-list li {
+      color: #adbcc3;
       display: inline-block;
       font-size: 20px;
       font-weight: 300;
       margin: 0 20px;
       cursor: pointer; }
-      .nav-list-container .nav-list li a {
-        color: inherit;
-        text-decoration: none; }
-      .nav-list-container .nav-list li a:hover {
-        color: inherit;
-        text-decoration: none;
-        cursor: pointer; }
+      .nav-list-container .nav-list li:hover, .nav-list-container .nav-list li.active {
+        color: #2d4255; }
       .nav-list-container .nav-list li:last-child {
         margin-right: 0; }
 
-.inactive-section {
-  opacity: 0; }
+.loading-indicator {
+  position: absolute;
+  z-index: 1000;
+  width: 16px;
+  height: 16px;
+  top: 200px;
+  display: none; }
+  .loading-indicator.is-loading {
+    display: block; }
 
 .home-container {
   width: 100%;
@@ -97,21 +121,83 @@ header {
       font-weight: 100;
       margin: 30px 0 60px 0; }
 
+#cont {
+  height: 100%; }
+
 .main-content {
   margin-top: 80px;
-  color: #2d4255; }
+  color: #2d4255;
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 202px; }
+  .main-content.contact i {
+    margin-right: 10px; }
+  .main-content.contact .sub-section-title {
+    margin-bottom: 35px !important; }
+  .main-content.contact .sub-section-text {
+    margin: 0 !important;
+    padding: 5px 0 !important; }
   .main-content .section-main-text {
     font-size: 24px;
     line-height: 40px;
     font-weight: 300; }
-  .main-content .sub-section .sub-section-title {
-    font-weight: 300; }
-  .main-content .sub-section .sub-section-text {
-    padding: 10px 0;
-    font-weight: 300; }
+  .main-content .sub-section {
+    margin-bottom: 20px; }
+    .main-content .sub-section .sub-section-title {
+      font-size: 20px;
+      font-weight: 300; }
+    .main-content .sub-section .sub-section-text {
+      display: block;
+      padding: 10px 0;
+      font-weight: 300; }
+
+.team-members {
+  padding: 80px 0; }
+  .team-members .team-member-name {
+    margin-bottom: 0; }
+  .team-members .team-member-position {
+    margin-top: 0; }
+  .team-members .social ul {
+    list-style: none;
+    padding: 0; }
+    .team-members .social ul li {
+      display: inline-block;
+      font-size: 30px;
+      padding: 0 10px; }
+
+.contact .contact-container {
+  padding-bottom: 80px; }
+.contact .contact-input, .contact .contact-textarea {
+  -webkit-appearance: none;
+  outline: none;
+  display: block;
+  width: 80%;
+  margin: 5px 0 15px 0;
+  padding: 5px 10px;
+  border: solid 1px #adbcc3;
+  line-height: 1.5em;
+  font-weight: 300;
+  color: #2d4255;
+  resize: none; }
+  .contact .contact-input:focus, .contact .contact-textarea:focus {
+    border: solid 1px #2d4255; }
+.contact .contact-input {
+  height: 2em; }
+.contact .contact-textarea {
+  height: 20em; }
+.contact .contact-send-button {
+  outline: 0;
+  border: 0;
+  background-color: #2d4255;
+  color: white;
+  padding: 5px 20px; }
 
 .page-footer {
-  color: white; }
+  color: white;
+  position: relative;
+  margin-top: -202px;
+  height: 202px;
+  clear: both; }
   .page-footer.about-us {
     background-color: #e93c4f; }
 

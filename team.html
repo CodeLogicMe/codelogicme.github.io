@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/font-awesome.css">
   <script src="js/jquery-2.0.3.js"></script>
   <script src="js/app.js"></script>
 </head>
@@ -16,15 +17,14 @@
       <div class="columns large-12">
         <div class="nav-container">
           <div class="logo-container">
-            <img src="img/logo.svg" alt="">
-            <!-- <embed class="logo" src="img/logo.svg" type="image/svg+xml"> -->
-            <!-- <h1 class="logo-text">codelogic</h1> -->
+            <a class="logo-image" href="/"><img src="img/logo.svg" alt=""></a>
+            <h2 class="logo-text transition">codelogic</h2>
           </div>
           <div class="nav-list-container">
             <ul class="nav-list">
-              <li><a href="about.html">about us</a></li>
-              <li><a href="team.html">our team</a></li>
-              <li><a href="contact.html">contact us</a></li>
+              <li class="transition"><a href="about.html">about us</a></li>
+              <li class="transition"><a href="team.html">our team</a></li>
+              <li class="transition"><a href="contact.html">contact us</a></li>
             </ul>
           </div>
         </div>
@@ -32,30 +32,78 @@
     </div>
   </header>
 
+  <img src="img/loader.gif" alt="" class="loading-indicator">
+
   <section id="main-container">
     <div id="cont">
       <div class="page-title-container sections transition inactive">
-        <h1 class="main-title-section">Our team!</h1>
+        <h1 class="main-title-section">Meet our team!</h1>
       </div>
-      <div class="row main-content">
+      <div class="row main-content team text-center">
         <div class="row">
-          <div class="column large-5">
-            <h1 class="section-main-text">To best suit your needs, we select the best tools from a wide range of open source ones. We truly believe that open source technologies are the way to go and we contribute to them a lot - I mean a LOT...</h1>
+          <div class="column large-12">
+            <h1 class="section-main-text">These are the stars that make your spark come true!</h1>
           </div>
-          <div class="column large-5 large-offset-2">
-            <div class="row">
-              <div class="column medium-12 sub-section">
-                <h2 class="sub-section-title">Why choose us?</h2>
-                <p class="sub-section-text">We are a creative team who firmly believes that the most important thing is to continuously amaze our clients with solutions that will make their life easier.</p>
-              </div>
+        </div>
+        <div class="row team-members">
+
+          <div class="column medium-4 sub-section team-member">
+            <img src="img/team/lukas.png" alt="">
+            <h2 class="team-member-name sub-section-title">Lukas Alexandre (Luke)</h2>
+            <p class="team-member-position sub-section-text">Bug Smasher</p>
+            <div class="social">
+              <ul>
+                <li>
+                  <a href="https://github.com/lukelex" target="_blank" class="fa fa-github"></a>
+                </li>
+                <li>
+                  <a href="http://br.linkedin.com/pub/lukas-andrade/26/151/77a/en" target="_blank" class="fa fa-linkedin"></a>
+                </li>
+                <li>
+                  <a href="http://www.facebook.com/lukastm" target="_blank" class="fa fa-facebook-square"></a>
+                </li>
+              </ul>
             </div>
-            <div class="row">
-              <div class="column medium-12 sub-section">
-                <h2 class="sub-section-title">What do we do?</h2>
-                <p class="sub-section-text">We focus on figuring out what is your real problem and through rapid iterations with delivery cycles we will, together, find out how to best solve your problem.</p>
-              </div>
-            </div>
+            <p class="sub-section-text">When not programming awesome Ruby & Javascript applications he can be found hacking some Arduino and Elixir projects.</p>
           </div>
+
+          <div class="column medium-4 sub-section team-member">
+            <img src="img/team/kimo.png" alt="">
+            <h2 class="team-member-name sub-section-title">Thiago Rocha (Kimo)</h2>
+            <p class="team-member-position sub-section-text">Mobile/Web Architect</p>
+            <div class="social">
+              <ul>
+                <li>
+                  <a href="https://github.com/thiagokimo" target="_blank" class="fa fa-github"></a>
+                </li>
+                <li>
+                  <a href="http://www.linkedin.com/in/thiagokimo" target="_blank" class="fa fa-linkedin"></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/thiagokimo" target="_blank" class="fa fa-facebook-square"></a>
+                </li>
+              </ul>
+            </div>
+            <p class="sub-section-text">A table tennis player who often improve its scraping/indexing techniques through the web.</p>
+          </div>
+
+          <div class="column medium-4 sub-section team-member">
+            <img src="img/team/raphael.png" alt="">
+            <h2 class="team-member-name sub-section-title">Raphael Faria (Boy)</h2>
+            <p class="team-member-position sub-section-text">Designer/Developer</p>
+            <div class="social">
+              <ul>
+                <li>
+                  <a href="https://github.com/raphaelfaria" target="_blank" class="fa fa-github"></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ORaphaelFaria" target="_blank" class="fa fa-facebook-square"></a>
+                </li>
+              </ul>
+            </div>
+            <p class="sub-section-text">Musician and Curious in his spare time, loves Web and C developing.</p>
+          </div>
+
         </div>
         <div class="row">
 
@@ -79,7 +127,6 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
 </body>
 </html>
