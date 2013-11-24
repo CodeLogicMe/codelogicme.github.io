@@ -1,5 +1,10 @@
 $(function() {
 
+  var today = new Date();
+  var beginningCL = new Date(2012, 7, 10);
+
+  var daysCount = Math.floor((today - beginningCL) / (1000 * 60 * 60 * 24));
+
   var hashLocation = "",
       $mainContainer = $("#main-container");
 
@@ -16,7 +21,6 @@ $(function() {
     window.location.replace("#/");
   }
   else {
-    console.log(loadLocation);
     $('a[href="' + loadLocation + '"]').parent().addClass("active");
   }
 
@@ -48,6 +52,7 @@ $(function() {
           $(".loading-indicator").addClass("is-loading");
           $mainContainer.hide().load(hashLocation + " #cont", function() {
             $(".loading-indicator").removeClass("is-loading");
+            $(".working-days").text(daysCount + " days of work");
             $mainContainer.fadeIn(200, function() {
               pageTitleContainer = $(".page-title-container");
               pageTitleContainer.removeClass("inactive");
