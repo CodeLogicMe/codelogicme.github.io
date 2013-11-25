@@ -119,9 +119,11 @@ $(function() {
   $(document).on("scroll", function() {
     if($(window).scrollTop() <= 10) {
       $("header").removeClass("scrolled");
+      $(".logo-container .logo-text").removeClass("active");
     }
     else {
       $("header").addClass("scrolled");
+      $(".logo-container .logo-text").addClass("active");
     }
   });
   donutGraph.init();
