@@ -1,0 +1,7 @@
+name: Codelogic.me
+markdown: redcarpet
+pygments: true
+
+baseurl: http://codelogic.me
+
+permalink: pretty
