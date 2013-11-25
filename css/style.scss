@@ -3,7 +3,7 @@ $main-dark: #2d4255;
 $darker-blue: #323237;
 $main-light: #adbcc3;
 $bg-grey: #f1f1f1;
-$light-main: #e93c4f;
+$light-red: #e93c4f;
 
 * {
   -webkit-box-sizing: border-box;
@@ -176,7 +176,7 @@ header {
 
 .about-icons {
   color: #fff !important;
-  background-color: $light-main;
+  background-color: $light-red;
   padding: 20px 0;
 }
 
