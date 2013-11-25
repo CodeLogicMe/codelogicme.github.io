@@ -70,9 +70,9 @@ var donutGraph = {
     };
 
     graphLanguages.forEach(function(entry) {
-      color = entry.color;
-      value = entry.value;
-      text = entry.language;
+      var color = entry.color,
+          value = entry.value,
+          text = entry.language;
       // console.log(entry);
       // console.log(startAngle);
 
@@ -125,5 +125,4 @@ $(function() {
     }
   });
   donutGraph.init();
-
 });
