@@ -29,7 +29,7 @@ var donutGraph = {
       ,{
         "language": "Objective C",
         "value": 12,
-        "color": "#a041d7"
+        "color": "#73d741"
       }
     ];
 
@@ -58,14 +58,14 @@ var donutGraph = {
           ['M', sx, sy],
           ['A', rad, rad, 0, 0, 0, x, y]
           ];
-          console.log("start = " + startAngle);
-          console.log("alpha = " + alpha);
-          console.log("sx = " + sx + " ; sy = " + sy);
-          console.log("x = " + x + " ; y = " + y);
-          console.log("cos start angle = " + Math.cos(startAngle));
-          console.log("sin start angle = " + Math.sin(startAngle));
-          console.log("cos start angle = " + Math.cos(startAngle + alpha));
-          console.log("sin start angle = " + Math.sin(startAngle + alpha));
+          // console.log("start = " + startAngle);
+          // console.log("alpha = " + alpha);
+          // console.log("sx = " + sx + " ; sy = " + sy);
+          // console.log("x = " + x + " ; y = " + y);
+          // console.log("cos start angle = " + Math.cos(startAngle));
+          // console.log("sin start angle = " + Math.sin(startAngle));
+          // console.log("cos start angle = " + Math.cos(startAngle + alpha));
+          // console.log("sin start angle = " + Math.sin(startAngle + alpha));
       return { path: path, stroke: color };
     };
 
@@ -107,6 +107,15 @@ $(function() {
   var daysCount = Math.floor((today - beginningCL) / (1000 * 60 * 60 * 24));
   $(".working-days").text(daysCount + " days of work");
 
+  $(".nav-list li a").click(function(event) {
+    event.preventDefault();
+  });
+
+  ($(".nav-container")).onePageNav({
+    changeHash: true,
+    currentClass: 'active'
+  });
+
   $(document).on("scroll", function() {
     if($(window).scrollTop() <= 10) {
       $("header").removeClass("scrolled");
@@ -115,17 +124,6 @@ $(function() {
       $("header").addClass("scrolled");
     }
   });
-
-  // var values = [30,30,30,10],
-      // labels = ["Ruby","JavaScript","C","HTML"];
-  // $("tr").each(function () {
-  //   values.push(parseInt($("td", this).text(), 10));
-  //   labels.push($("th", this).text());
-  // });
-  // $("table").hide();
-  // Raphael("holder", 440, 344).pieChart(220, 172, 145, values, labels, "#fff");
-
-
-
   donutGraph.init();
+
 });

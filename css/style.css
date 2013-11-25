@@ -82,14 +82,20 @@ header {
       .nav-list-container .nav-list li:last-child {
         margin-right: 0; }
 
+section {
+  padding-top: 90px !important;
+  margin-top: -90px !important; }
+
 #cover {
-  padding: 125px 0 35px 0;
+  padding: 0 0 35px 0;
   color: white;
   background-image: url(../img/bg.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   background-position: 0 30%; }
-  #cover .cover-logo, #cover .icon-list {
+  #cover .cover-logo {
+    padding: 160px 0 35px 0; }
+  #cover .icon-list {
     padding: 35px 0; }
   #cover .cover-logo .main-title-logo-img {
     margin-bottom: 20px; }
@@ -153,6 +159,10 @@ header {
     display: inline-block;
     font-size: 30px;
     padding: 0 10px; }
+
+.team-icons {
+  height: 230px;
+  background-color: #323237; }
 
 .contact-section {
   font-weight: 400 !important; }
