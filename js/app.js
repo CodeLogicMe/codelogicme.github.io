@@ -35,7 +35,7 @@ var donutGraph = {
 
     var r = Raphael("holder", chartWidth, chartHeight),
         rad = chartRadius,
-        defaultText = 'Skils',
+        defaultText = 'Skills',
         speed = 250;
 
     r.circle(chartCenterW, chartCenterH, 115).attr({ stroke: 'none', fill: '#323237' });
