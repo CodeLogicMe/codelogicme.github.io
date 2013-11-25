@@ -12,37 +12,56 @@ var donutGraph = {
 
     var graphLanguages = [
       {
-        "language": "JavaScript",
-        "value": 45,
-        "color": "#d9884b"
-      }
-      ,{
-        "language": "Ruby",
-        "value": 35,
+        "language": "Rails",
+        "value": 12.5,
         "color": "#d63b54"
       }
       ,{
-        "language": "C",
-        "value": 8,
-        "color": "#4395d7"
+        "language": "HTML/CSS",
+        "value": 12.5,
+        "color": "#e44d26"
       }
       ,{
-        "language": "Objective C",
-        "value": 12,
-        "color": "#73d741"
+        "language": "AngularJS",
+        "value": 12.5,
+        "color": "#a6120d"
+      }
+      ,{
+        "language": "Grape",
+        "value": 12.5,
+        "color": "#632768"
+      }
+      ,{
+        "language": "Android",
+        "value": 12.5,
+        "color": "#7fbd02"
+      }
+      ,{
+        "language": "NodeJS",
+        "value": 12.5,
+        "color": "#8bc84b"
+      }
+      ,{
+        "language": "Sinatra",
+        "value": 12.5,
+        "color": "#6d6d6d"
+      }
+
+      ,{
+        "language": "Express",
+        "value": 12.5,
+        "color": "#d6d6d6"
       }
     ];
 
     var r = Raphael("holder", chartWidth, chartHeight),
         rad = chartRadius,
-        defaultText = 'Skills',
+        defaultText = '',
         speed = 250;
-
-    r.circle(chartCenterW, chartCenterH, 115).attr({ stroke: 'none', fill: '#323237' });
 
     var title = r.text(chartCenterW, chartCenterH, defaultText).attr({
       font: '16px Roboto',
-      fill: '#adbcc3'
+      fill: '#323237'
     }).toFront();
 
     r.customAttributes.arc = function(value, color, rad) {
