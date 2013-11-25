@@ -107,7 +107,7 @@ var donutGraph = {
         if(Raphael.type != 'VML') //solves IE problem
           this.toFront();
         title.stop().animate({ opacity: 0 }, speed, '>', function(){
-          this.attr({ text: text + '\n' + value + '%' }).animate({ opacity: 1 }, speed, '<');
+          this.attr({ text: text + '\n' }).animate({ opacity: 1 }, speed, '<');
         });
             }).mouseout(function(){
         this.stop().animate({ 'stroke-width': 60, opacity: 1 }, speed*4, 'elastic');
