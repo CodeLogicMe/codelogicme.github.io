@@ -138,11 +138,11 @@ $(function() {
   $(document).on("scroll", function() {
     if($(window).scrollTop() <= 10) {
       $("header").removeClass("scrolled");
-      $(".logo-container .logo-text").removeClass("active");
+      $(".logo-container .logo-text").removeClass("scrollDisplay");
     }
     else {
       $("header").addClass("scrolled");
-      $(".logo-container .logo-text").addClass("active");
+      $(".logo-container .logo-text").addClass("scrollDisplay");
     }
   });
   donutGraph.init();

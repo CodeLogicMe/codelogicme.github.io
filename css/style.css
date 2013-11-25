@@ -59,7 +59,7 @@ header {
     margin-left: 20px;
     font-weight: 300;
     opacity: 0; }
-    .logo-container .logo-text.active {
+    .logo-container .logo-text.scrollDisplay {
       opacity: 1; }
 
 .nav-list-container {
@@ -163,7 +163,7 @@ section {
     padding: 0 10px; }
 
 .team-icons {
-  height: 230px;
+  height: 130px;
   background-color: #323237; }
 
 .contact-section {

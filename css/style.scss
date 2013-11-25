@@ -92,7 +92,7 @@ header {
     font-weight: 300;
     opacity: 0;
 
-    &.active {
+    &.scrollDisplay {
       opacity: 1;
     }
   }
@@ -269,7 +269,7 @@ section {
 
 
 .team-icons {
-  height: 230px;
+  height: 130px;
   background-color: #323237;
 }
 
