@@ -106,8 +106,8 @@ var donutGraph = {
         this.animate({ 'stroke-width': 80, opacity: .75 }, 1000, 'elastic');
         if(Raphael.type != 'VML') //solves IE problem
           this.toFront();
-        title.stop().animate({ opacity: 0 }, speed, '>', function(){
-          this.attr({ text: text + '\n' }).animate({ opacity: 1 }, speed, '<');
+        title.stop().animate({ opacity: 0 }, 0, '>', function(){
+          this.attr({ text: text}).animate({ opacity: 1 }, 100, '<');
         });
             }).mouseout(function(){
         this.stop().animate({ 'stroke-width': 60, opacity: 1 }, speed*4, 'elastic');
@@ -136,9 +136,10 @@ $(function() {
   });
 
   $(document).on("scroll", function() {
-    if($(window).scrollTop() <= 10) {
+    if($(window).scrollTop() <= 1) {
       $("header").removeClass("scrolled");
       $(".logo-container .logo-text").removeClass("scrollDisplay");
+
     }
     else {
       $("header").addClass("scrolled");
