@@ -1,6 +1,6 @@
 name: Codelogic.me
 markdown: redcarpet
-pygments: true
+highlighter: true
 
 baseurl: http://codelogic.me
 
