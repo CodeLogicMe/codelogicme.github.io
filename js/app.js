@@ -13,19 +13,23 @@ var donutGraph = {
     var graphLanguages = [
       {
         "language": "HTML/CSS",
-        "value": 25,
+        "value": 20,
         "color": "#e44d26"
       }, {
         "language": "Ruby",
-        "value": 25,
+        "value": 20,
         "color": "#a6120d"
       }, {
         "language": "Android",
-        "value": 25,
+        "value": 20,
         "color": "#7fbd02"
       }, {
+        "language": "Javascript",
+        "value": 20,
+        "color": "#d6d6d6"
+      }, {
         "language": "NodeJS",
-        "value": 25,
+        "value": 20,
         "color": "#8bc84b"
       }
     ];
