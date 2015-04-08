@@ -12,45 +12,21 @@ var donutGraph = {
 
     var graphLanguages = [
       {
-        "language": "Rails",
-        "value": 12.5,
-        "color": "#d63b54"
-      }
-      ,{
         "language": "HTML/CSS",
-        "value": 12.5,
+        "value": 25,
         "color": "#e44d26"
-      }
-      ,{
-        "language": "AngularJS",
-        "value": 12.5,
+      }, {
+        "language": "Ruby",
+        "value": 25,
         "color": "#a6120d"
-      }
-      ,{
-        "language": "Grape",
-        "value": 12.5,
-        "color": "#632768"
-      }
-      ,{
+      }, {
         "language": "Android",
-        "value": 12.5,
+        "value": 25,
         "color": "#7fbd02"
-      }
-      ,{
+      }, {
         "language": "NodeJS",
-        "value": 12.5,
+        "value": 25,
         "color": "#8bc84b"
-      }
-      ,{
-        "language": "Sinatra",
-        "value": 12.5,
-        "color": "#6d6d6d"
-      }
-
-      ,{
-        "language": "Express",
-        "value": 12.5,
-        "color": "#d6d6d6"
       }
     ];
 
@@ -77,14 +53,6 @@ var donutGraph = {
           ['M', sx, sy],
           ['A', rad, rad, 0, 0, 0, x, y]
           ];
-          // console.log("start = " + startAngle);
-          // console.log("alpha = " + alpha);
-          // console.log("sx = " + sx + " ; sy = " + sy);
-          // console.log("x = " + x + " ; y = " + y);
-          // console.log("cos start angle = " + Math.cos(startAngle));
-          // console.log("sin start angle = " + Math.sin(startAngle));
-          // console.log("cos start angle = " + Math.cos(startAngle + alpha));
-          // console.log("sin start angle = " + Math.sin(startAngle + alpha));
       return { path: path, stroke: color };
     };
 
@@ -92,8 +60,6 @@ var donutGraph = {
       var color = entry.color,
           value = entry.value,
           text = entry.language;
-      // console.log(entry);
-      // console.log(startAngle);
 
       var z = r.path().attr({
         arc: [value, color, rad],
@@ -104,12 +70,13 @@ var donutGraph = {
 
       z.mouseover(function(){
         this.animate({ 'stroke-width': 80, opacity: .75 }, 1000, 'elastic');
-        if(Raphael.type != 'VML') //solves IE problem
+        if (Raphael.type != 'VML') { //solves IE problem
           this.toFront();
+        }
         title.stop().animate({ opacity: 0 }, 0, '>', function(){
           this.attr({ text: text}).animate({ opacity: 1 }, 100, '<');
         });
-            }).mouseout(function(){
+      }).mouseout(function(){
         this.stop().animate({ 'stroke-width': 60, opacity: 1 }, speed*4, 'elastic');
         title.stop().animate({ opacity: 0 }, speed, '>', function(){
           title.attr({ text: defaultText }).animate({ opacity: 1 }, speed, '<');
@@ -118,7 +85,6 @@ var donutGraph = {
     });
   }
 }
-
 
 $(function() {
   var today = new Date();
@@ -130,7 +96,7 @@ $(function() {
     event.preventDefault();
   });
 
-  ($(".nav-container")).onePageNav({
+  $(".nav-container").onePageNav({
     changeHash: true,
     currentClass: 'active'
   });
@@ -139,9 +105,7 @@ $(function() {
     if($(window).scrollTop() <= 1) {
       $("header").removeClass("scrolled");
       $(".logo-container .logo-text").removeClass("scrollDisplay");
-
-    }
-    else {
+    } else {
       $("header").addClass("scrolled");
       $(".logo-container .logo-text").addClass("scrollDisplay");
     }
